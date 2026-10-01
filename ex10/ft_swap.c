@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-luca <dde-luca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/29 20:27:57 by dde-luca          #+#    #+#             */
-/*   Updated: 2026/09/30 19:26:46 by dde-luca         ###   ########.fr       */
+/*   Created: 2026/09/30 19:53:01 by dde-luca          #+#    #+#             */
+/*   Updated: 2026/09/30 20:12:47 by dde-luca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar(char a);
 
-void 	ft_print_alphabet(void)
+void ft_swap(int *a, int *b)
 {
-	char a;
-	a = 'a';
-	while(a <= 'z'){
-		ft_putchar(a);
-		a++;
-	}
+    int c;
+    c = *a;
+    *a = *b;
+    *b = c;
 }
-/*
-int	main(void)
+
+
+/*#include <stdio.h>
+int main(void)
 {
-	ft_print_alphabet();
-	return(0);
-}
-*/
+
+    int a = 1;
+    int b = 2;
+
+    int *PA = &a;
+    int *PB = &b;
+    
+     ft_swap(PA, PB);
+
+    printf("%d %d",*PA, *PB);
+}*/

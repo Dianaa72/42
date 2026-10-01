@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-luca <dde-luca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/29 20:27:57 by dde-luca          #+#    #+#             */
-/*   Updated: 2026/09/30 19:26:46 by dde-luca         ###   ########.fr       */
+/*   Created: 2026/09/30 20:30:48 by dde-luca          #+#    #+#             */
+/*   Updated: 2026/09/30 20:57:36 by dde-luca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar(char a);
+int ft_iterative_factorial(int nb)
+{
+    int resultado;
+    resultado = 1;
+    
+    if (nb < 0)
+    {
+        return(0);
+    }
 
-void 	ft_print_alphabet(void)
-{
-	char a;
-	a = 'a';
-	while(a <= 'z'){
-		ft_putchar(a);
-		a++;
-	}
+    while (nb > 0){
+        resultado =  resultado * nb;
+        nb--;
+    }
+
+    return(resultado);  
 }
-/*
-int	main(void)
+
+/*#include <stdio.h>
+int main(void)
 {
-	ft_print_alphabet();
-	return(0);
-}
-*/
+
+ft_iterative_factorial(4);
+printf("%d",ft_iterative_factorial(4));
+}*/

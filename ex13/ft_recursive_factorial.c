@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-luca <dde-luca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/29 20:27:57 by dde-luca          #+#    #+#             */
-/*   Updated: 2026/09/30 19:26:46 by dde-luca         ###   ########.fr       */
+/*   Created: 2026/09/30 20:58:27 by dde-luca          #+#    #+#             */
+/*   Updated: 2026/10/01 00:57:38 by dde-luca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar(char a);
 
-void 	ft_print_alphabet(void)
+
+int ft_recursive_factorial(int nb)
 {
-	char a;
-	a = 'a';
-	while(a <= 'z'){
-		ft_putchar(a);
-		a++;
-	}
+    int resultado = 1;
+    if(nb < 0)
+    {
+        return(0);
+    }
+
+    if (nb == 0 || nb == 1)
+    {
+        return(1);
+    }
+    
+    resultado = nb;
+    nb--;
+    resultado = resultado * ft_recursive_factorial(nb);
+
+    return(resultado);
 }
-/*
-int	main(void)
+
+#include  <stdio.h>
+int main(void)
 {
-	ft_print_alphabet();
-	return(0);
+ printf("%d", ft_recursive_factorial(4));   
 }
-*/

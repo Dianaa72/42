@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-luca <dde-luca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/29 20:27:57 by dde-luca          #+#    #+#             */
-/*   Updated: 2026/09/30 19:26:46 by dde-luca         ###   ########.fr       */
+/*   Created: 2026/09/30 19:06:41 by dde-luca          #+#    #+#             */
+/*   Updated: 2026/09/30 19:24:56 by dde-luca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 void ft_putchar(char a);
 
-void 	ft_print_alphabet(void)
-{
-	char a;
-	a = 'a';
-	while(a <= 'z'){
-		ft_putchar(a);
-		a++;
-	}
+
+
+void ft_is_negative(int n){
+
+    if (n < 0){
+        ft_putchar('N');
+    }else{
+        ft_putchar('P');
+    }
+
 }
+
+
 /*
-int	main(void)
-{
-	ft_print_alphabet();
-	return(0);
+int main (void){
+
+    ft_is_negative(-2);
+    return(0);
+
 }
 */
