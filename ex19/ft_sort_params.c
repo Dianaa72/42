@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dde-luca <dde-luca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 20:43:11 by dde-luca          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2026/10/06 17:39:34 by dde-luca         ###   ########.fr       */
+=======
+/*   Updated: 2026/10/05 17:47:26 by marvin           ###   ########.fr       */
+>>>>>>> 97ef195c86ba5a6d7a8a82821c290e76175e773d
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +19,11 @@
 
 
    
+<<<<<<< HEAD
 /*
+=======
+
+>>>>>>> 97ef195c86ba5a6d7a8a82821c290e76175e773d
 int main(int argc, char **argv)
 {
     int i;
@@ -57,9 +65,14 @@ int main(int argc, char **argv)
         j++;
     }
     return(0);
+<<<<<<< HEAD
 }*/
 
 #include <unistd.h>
+=======
+}
+/*#include <unistd.h>
+>>>>>>> 97ef195c86ba5a6d7a8a82821c290e76175e773d
 
 void	ft_putchar(char c)
 {
@@ -106,4 +119,8 @@ int	main(int argc, char **argv)
 		j++;
 	}
 	return (0);
+<<<<<<< HEAD
 } 
+=======
+} */
+>>>>>>> 97ef195c86ba5a6d7a8a82821c290e76175e773d
