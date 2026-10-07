@@ -6,20 +6,18 @@
 /*   By: dde-luca <dde-luca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 19:53:01 by dde-luca          #+#    #+#             */
-/*   Updated: 2026/09/30 20:12:47 by dde-luca         ###   ########.fr       */
+/*   Updated: 2026/10/07 20:48:04 by dde-luca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-void ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
-    int c;
-    c = *a;
-    *a = *b;
-    *b = c;
+	int	c;
+
+	c = *a;
+	*a = *b;
+	*b = c;
 }
-
-
 /*#include <stdio.h>
 int main(void)
 {

@@ -6,17 +6,19 @@
 /*   By: dde-luca <dde-luca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 20:27:57 by dde-luca          #+#    #+#             */
-/*   Updated: 2026/09/30 19:26:46 by dde-luca         ###   ########.fr       */
+/*   Updated: 2026/10/07 17:14:53 by dde-luca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar(char a);
+void	ft_putchar(char a);
 
-void 	ft_print_alphabet(void)
+void	ft_print_alphabet(void)
 {
-	char a;
+	char	a;
+
 	a = 'a';
-	while(a <= 'z'){
+	while (a <= 'z')
+	{
 		ft_putchar(a);
 		a++;
 	}

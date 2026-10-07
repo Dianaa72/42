@@ -6,29 +6,25 @@
 /*   By: dde-luca <dde-luca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 19:04:16 by dde-luca          #+#    #+#             */
-/*   Updated: 2026/10/02 19:12:09 by dde-luca         ###   ########.fr       */
+/*   Updated: 2026/10/07 20:45:53 by dde-luca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_strlen(char *str)
+{
+	int	i;
 
-
-int ft_strlen(char *str){
-    int i;
-    i = 0;
-    while (str[i] != '\0')
-    {
-        i++;
-    }
-    return(i);
-
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
-
-
-
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main(void){
     char *a;
     a = "abc";
     printf("%d", ft_strlen(a));
-}
+}*/

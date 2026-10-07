@@ -1,41 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-luca <dde-luca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/02 19:13:03 by dde-luca          #+#    #+#             */
-/*   Updated: 2026/10/07 20:45:27 by dde-luca         ###   ########.fr       */
+/*   Created: 2026/10/07 20:24:18 by dde-luca          #+#    #+#             */
+/*   Updated: 2026/10/07 20:41:27 by dde-luca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+void	ft_foreach(int *tab, int length, void (*f)(int))
 {
 	int	i;
 
-	i = 0;
-	while (s1[i] != '\0' || s2[i] != '\0')
-	{
-		if (s1[i] - s2[i] == 0)
-		{
-			i++;
-		}
-		else
-		{
-			return (s1[i] - s2[i]);
-		}
-	}
-	return (0);
+	if (!tab)
+		return ;
+	i = -1;
+	while (++i < length)
+		f(tab[i]);
 }
-
-/*#include <stdio.h>
-int main(void){
-
-	char *primero;
-	char *segundo;
-	primero = "ABC";
-	segundo = "ABC";
-
-	printf("%d",ft_strcmp(primero, segundo));
-}*/

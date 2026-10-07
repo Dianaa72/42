@@ -6,18 +6,15 @@
 /*   By: dde-luca <dde-luca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 20:13:35 by dde-luca          #+#    #+#             */
-/*   Updated: 2026/09/30 20:29:59 by dde-luca         ###   ########.fr       */
+/*   Updated: 2026/10/07 20:47:50 by dde-luca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-void ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-    *div = a/b;
-    *mod = a%b;
+	*div = a / b;
+	*mod = a % b;
 }
-
-
 /*#include <stdio.h>
 int main(void)
 {

@@ -6,28 +6,27 @@
 /*   By: dde-luca <dde-luca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 15:48:09 by dde-luca          #+#    #+#             */
-/*   Updated: 2026/10/02 18:57:02 by dde-luca         ###   ########.fr       */
+/*   Updated: 2026/10/07 20:46:12 by dde-luca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void ft_putchar(char a);/*{
+void	ft_putchar(char a);/*{
     write(1, &a, 1);
 }*/
 
-void ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
-    int i;
-    i = 0;
-    while (str[i] != '\0')
-    {
-        ft_putchar('\n');
-        ft_putchar(str[i]);
-        i++;
-    }
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar('\n');
+		ft_putchar(str[i]);
+		i++;
+	}
 }
-/*
+/* otra manera de hacerlo
 void ft_putstr(char *str)
 {
     while (*str)
@@ -38,8 +37,7 @@ void ft_putstr(char *str)
     }
 }*/
 
-
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main(void){
     char *a; //declarar variable 
@@ -47,4 +45,4 @@ int main(void){
     //char *PA = &a; 
     //*a == 'a';
     ft_putstr(a);
-}
+}*/

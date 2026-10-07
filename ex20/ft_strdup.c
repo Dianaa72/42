@@ -6,12 +6,12 @@
 /*   By: dde-luca <dde-luca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 17:41:10 by dde-luca          #+#    #+#             */
-/*   Updated: 2026/10/06 19:20:39 by dde-luca         ###   ########.fr       */
+/*   Updated: 2026/10/07 20:43:30 by dde-luca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
+/*#include <stdio.h>*/
 
 int	ft_strlen(char *str)
 {
@@ -25,7 +25,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char *ft_strdup(char *src)
+char	*ft_strdup(char *src)
 {
 	char	*original;
 	int		length;
@@ -41,15 +41,17 @@ char *ft_strdup(char *src)
 	original[length] = '\0';
 	while (src[i] != '\0' )
 	{
-		original[i] = src[i];  /*while (*src) { original[i] = *src; i++; src++; } */
+		original[i] = src[i];
 		i++;
 	}
 	return (original);
 }
 
-int main(void)
+/*while (*src) { original[i] = *src; i++; src++; } */
+
+/*int main(void)
 {
 	char *copia;
 	copia = ft_strdup("NULL");
 	printf("%s", copia);
-}
+}*/

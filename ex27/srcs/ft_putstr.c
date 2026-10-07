@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   kk                                                 :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-luca <dde-luca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/06 20:20:21 by dde-luca          #+#    #+#             */
-/*   Updated: 2026/10/06 20:26:28 by dde-luca         ###   ########.fr       */
+/*   Created: 2026/10/07 20:31:09 by dde-luca          #+#    #+#             */
+/*   Updated: 2026/10/07 20:32:44 by dde-luca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_point.h"
+#include "../includes/ft.h"
 
-void set_point(t_point *point)
+void	ft_putstr(int output, char *str)
 {
-point->x = 42;
-point->y = 21;
-}
-int main(void)
-{
-t_point point;
-set_point(&point);
-return (0);
+	int	i;
+
+	i = -1;
+	while (str[++i])
+		ft_putchar(output, str[i]);
 }

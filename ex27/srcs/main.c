@@ -1,41 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-luca <dde-luca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/02 19:13:03 by dde-luca          #+#    #+#             */
-/*   Updated: 2026/10/07 20:45:27 by dde-luca         ###   ########.fr       */
+/*   Created: 2026/10/07 20:31:26 by dde-luca          #+#    #+#             */
+/*   Updated: 2026/10/07 20:40:18 by dde-luca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
-{
-	int	i;
+#include "../includes/ft.h"
 
-	i = 0;
-	while (s1[i] != '\0' || s2[i] != '\0')
+int	main(int ac, char **av)
+{
+	char	buffer[32768];
+	int		fd;
+
+	if (ac == 1)
 	{
-		if (s1[i] - s2[i] == 0)
-		{
-			i++;
-		}
-		else
-		{
-			return (s1[i] - s2[i]);
-		}
+		ft_putstr(2, "File name missing.\n");
+		return (0);
 	}
+	if (ac > 2)
+	{
+		ft_putstr(2, "Too many arguments.\n");
+		return (0);
+	}
+	fd = open(av[1], O_RDONLY);
+	if (fd != 3)
+	{
+		ft_putstr(2, "Cannot read file.\n");
+		return (0);
+	}
+	read(fd, buffer, 32768);
+	ft_putstr(1, buffer);
 	return (0);
 }
-
-/*#include <stdio.h>
-int main(void){
-
-	char *primero;
-	char *segundo;
-	primero = "ABC";
-	segundo = "ABC";
-
-	printf("%d",ft_strcmp(primero, segundo));
-}*/

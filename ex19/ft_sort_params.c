@@ -3,27 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dde-luca <dde-luca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 20:43:11 by dde-luca          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2026/10/06 17:39:34 by dde-luca         ###   ########.fr       */
-=======
-/*   Updated: 2026/10/05 17:47:26 by marvin           ###   ########.fr       */
->>>>>>> 97ef195c86ba5a6d7a8a82821c290e76175e773d
+/*   Updated: 2026/10/07 20:44:12 by dde-luca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include <unistd.h>
 
-#include <unistd.h>
-
-
-   
-<<<<<<< HEAD
 /*
-=======
-
->>>>>>> 97ef195c86ba5a6d7a8a82821c290e76175e773d
 int main(int argc, char **argv)
 {
     int i;
@@ -39,7 +28,8 @@ int main(int argc, char **argv)
     {
         while (argv[j][i])
         {
-            if(argv[j][i] - argv[j + 1][i] == 0 || argv[j][i] - argv[j + 1][i] < 0)
+            if(argv[j][i] - argv[j + 1][i] == 0 || argv[j][i] - argv[j + 1][i]
+			 < 0)
             {   
                 i++;
             }else{
@@ -65,62 +55,53 @@ int main(int argc, char **argv)
         j++;
     }
     return(0);
-<<<<<<< HEAD
 }*/
 
-#include <unistd.h>
-=======
-}
-/*#include <unistd.h>
->>>>>>> 97ef195c86ba5a6d7a8a82821c290e76175e773d
+//#include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putchar(char c);
+
+void	ft_print(int argc, char **argv)
 {
-	write(1, &c, 1);
+	int	i;
+	int	j;
+
+	j = 1;
+	while (j < argc)
+	{
+		i = 0;
+		while (argv[j][i])
+			ft_putchar(argv[j][i++]);
+		ft_putchar('\n');
+		j++;
+	}
 }
 
 int	main(int argc, char **argv)
 {
 	int		i;
 	int		j;
-	int		sorted;
-	char	*burbuja;
+	int		k;
+	char	*tmp;
 
-	sorted = 0;
-	while (!sorted)
+	i = 1;
+	while (i < argc - 1)
 	{
-		sorted = 1;
-		j = 1;
-		while (j < argc - 1)
+		j = i + 1;
+		while (j < argc)
 		{
-			i = 0;
-			while (argv[j][i] && argv[j][i] == argv[j + 1][i])
-				i++;
-			if (argv[j][i] > argv[j + 1][i])
+			k = 0;
+			while (argv[i][k] && argv[i][k] == argv[j][k])
+				k++;
+			if (argv[i][k] > argv[j][k])
 			{
-				burbuja = argv[j];
-				argv[j] = argv[j + 1];
-				argv[j + 1] = burbuja;
-				sorted = 0;
+				tmp = argv[i];
+				argv[i] = argv[j];
+				argv[j] = tmp;
 			}
 			j++;
 		}
+		i++;
 	}
-	j = 1;
-	while (j < argc)
-	{
-		i = 0;
-		while (argv[j][i])
-		{
-			ft_putchar(argv[j][i]);
-			i++;
-		}
-		ft_putchar('\n');
-		j++;
-	}
-	return (0);
-<<<<<<< HEAD
-} 
-=======
-} */
->>>>>>> 97ef195c86ba5a6d7a8a82821c290e76175e773d
+	ft_print(argc, argv);
+}
